@@ -4,11 +4,15 @@
       Нажми на меня
     </el-button>
   </el-row>
+  <h1 v-if="countState"></h1>
   <p>{{count}}</p>
 </template>
 <script setup>
-import {ref} from 'vue'
+import {ref, computed} from 'vue'
 const count = ref(0)
+const countState = computed(() => {
+  return count.value%2;
+})
 const increment = () => {
   count.value +=1
 }

@@ -12,5 +12,7 @@ module.exports = {
   },
   transformIgnorePatterns: ["/node_modules/(?!vue-awesome)"],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,vue}', '!src/main.js']
+  clearMocks: true,
+  coverageReporters: ['lcov', 'html', 'text-summary'],
+  collectCoverageFrom: ['src/**/*.{js,vue}', '!src/main.js'],
 }
